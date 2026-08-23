@@ -1,0 +1,36 @@
+import subprocess
+import sys
+
+target = sys.argv[1]
+
+initial = subprocess.run(
+    ["naabu", "-host", target, "-silent"],
+    capture_output=True,
+    text=True
+)
+
+if initial.stderr:
+    print("Error:", initial.stderr)
+    sys.exit()
+
+open_ports = []
+
+for line in initial.stdout.splitlines():
+    open_ports.append(line.split(":")[1])
+
+if not open_ports:
+    print("No open ports found.")
+    sys.exit()
+
+ports = ",".join(open_ports)
+
+final = subprocess.run(
+    ["nmap", "-sV", "-sC", "-sS", "-p", ports, target],
+    capture_output=True,
+    text=True
+)
+
+print(final.stdout)
+
+if final.stderr:
+    print("Error:", final.stderr)
