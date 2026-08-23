@@ -1,4 +1,4 @@
-# nmap-2.0
+# nmap2x
 
 this a script that automates naabu, the fastest network scanner and nmap to scan a IP twice the speed as traditional nmap scan
 
