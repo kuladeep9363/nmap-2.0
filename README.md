@@ -10,5 +10,6 @@ python3 <script_name.py> <IP>
 ```bash
 go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
 ```
+[read naabu documentation](https://github.com/projectdiscovery/naabu/blob/dev/README.md)
 
 note : this script only works for single IP addresses, list of IPs cant be scanned at time
