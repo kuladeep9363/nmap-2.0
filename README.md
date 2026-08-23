@@ -1,4 +1,4 @@
-## nmap-2.0
+# nmap-2.0
 
 this a script that automates naabu, the fastest network scanner and nmap to scan a IP twice the speed as traditional nmap scan
 
@@ -6,7 +6,7 @@ this a script that automates naabu, the fastest network scanner and nmap to scan
 ```bash
 go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
 ```
-# Running this script
+## Running this script
 ```bash
 python3 <script_name.py> <IP>
 ```
